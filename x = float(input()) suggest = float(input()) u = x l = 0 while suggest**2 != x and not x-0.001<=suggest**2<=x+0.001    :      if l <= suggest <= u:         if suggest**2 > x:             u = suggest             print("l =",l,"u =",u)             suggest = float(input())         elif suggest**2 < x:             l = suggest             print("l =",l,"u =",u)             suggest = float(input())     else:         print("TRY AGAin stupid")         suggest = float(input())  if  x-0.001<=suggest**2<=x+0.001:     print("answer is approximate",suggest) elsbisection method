@@ -1,0 +1,21 @@
+x = float(input())
+suggest = float(input())
+u = x
+l = 0
+while suggest**2 != x and not x-0.001<=suggest**2<=x+0.001    : 
+    if l <= suggest <= u:
+        if suggest**2 > x:
+            u = suggest
+            print("l =",l,"u =",u)
+            suggest = float(input())
+        elif suggest**2 < x:
+            l = suggest
+            print("l =",l,"u =",u)
+            suggest = float(input())
+    else:
+        print("TRY AGAin stupid")
+        suggest = float(input()) 
+if  x-0.001<=suggest**2<=x+0.001:
+    print("answer is approximate",suggest)
+else:
+    print("answer is",suggest)        
